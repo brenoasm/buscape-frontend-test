@@ -2,17 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import Toolbar from '../Toolbar';
+
 const propTypes = {};
 
 const defaultProps = {};
 
 const StyledApp = styled.div``;
 
-const App = () => {
-
+const App = ({
+  open,
+  toggleCartView
+}) => {
   return (
     <StyledApp>
-      test
+      <Toolbar open={open} toggleCartView={toggleCartView} />
     </StyledApp>
   )
 }
