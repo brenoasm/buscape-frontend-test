@@ -6,6 +6,8 @@ export const colors = {
   white: '#FFF',
   green: '#22B14C',
   blue: '#1990DF',
+  red: '#E80000',
+  gray: '#F3F3F3',
 };
 
 const theme = {

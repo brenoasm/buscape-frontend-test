@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { colors } from '../../theme';
+
 import Toolbar from '../Toolbar';
 
 const propTypes = {};
 
 const defaultProps = {};
 
-const StyledApp = styled.div``;
+const StyledApp = styled.div`
+  background-color: ${colors.gray};
+  height: 100%;
+`;
 
 const App = ({
   open,
