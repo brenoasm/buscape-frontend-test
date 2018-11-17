@@ -8,7 +8,7 @@ import combinedReducers from './reducers';
 
 import AppContainer from './containers/AppContainer';
 
-const store = createStore(() => {}, {}, applyMiddleware(thunk))
+const store = createStore(combinedReducers, {}, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>

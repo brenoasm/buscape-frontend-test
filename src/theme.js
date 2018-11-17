@@ -7,7 +7,8 @@ export const colors = {
   green: '#22B14C',
   blue: '#1990DF',
   red: '#E80000',
-  gray: '#F3F3F3',
+  grayPrimary: '#F3F3F3',
+  graySecondary: '#D8D8D8'
 };
 
 const theme = {

@@ -70,7 +70,7 @@ const CartItem = () => {
           </div>
         </div>
         <div>
-          <i class="fas fa-times" />
+          <i className="fas fa-times" />
         </div>
       </div>
     </StyledCartItem>

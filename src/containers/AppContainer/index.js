@@ -1,24 +1,26 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
+
+import { getToolbarMenuVisibility } from '../../selectors/toolbarMenuSelector';
+
+import { toggleMenuVisibility } from '../../actions/toolbarMenuAction';
 
 import App from "../../components/App";
 
 class AppContainer extends Component {
-  state = {
-    open: true
-  }
-
-  toggleCartView = () => {
-    const { open } = this.state;
-
-    // Colocar state no redux
-    this.setState({ open: !open })
-  }
-
   render() {
-    const { open } = this.state;
+    const { menuOpen, toggleMenuVisibility } = this.props;
 
-    return <App toggleCartView={this.toggleCartView} open={open} />;
+    return <App toggleMenuVisibility={toggleMenuVisibility} menuOpen={menuOpen} />;
   }
 }
 
-export default AppContainer;
+const mapStateToProps = ({ toolbarMenuState }) => ({
+  menuOpen: getToolbarMenuVisibility(toolbarMenuState)
+});
+
+const mapDispatchToProps = dispatch => ({
+  toggleMenuVisibility: () => dispatch(toggleMenuVisibility())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

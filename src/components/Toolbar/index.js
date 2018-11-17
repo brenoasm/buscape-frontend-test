@@ -61,7 +61,7 @@ const WithSlideUpDown = posed.div({
   open: { height: "auto" }
 });
 
-const Toolbar = ({ toggleCartView, open }) => {
+const Toolbar = ({ toggleMenuVisibility, menuOpen }) => {
   return (
     <StyledToolbar>
       <div>
@@ -69,12 +69,12 @@ const Toolbar = ({ toggleCartView, open }) => {
           src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
           alt="Buscape Logo"
         />
-        <span onClick={() => toggleCartView()}>
+        <span onClick={() => toggleMenuVisibility()}>
           <i className="fas fa-bars fa-3x" />
           <span>2</span>
         </span>
       </div>
-      <WithSlideUpDown pose={open ? "open" : "closed"}>
+      <WithSlideUpDown pose={menuOpen ? "open" : "closed"}>
         <Cart />
         <ShoppingResume />
       </WithSlideUpDown>
