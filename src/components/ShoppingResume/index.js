@@ -28,13 +28,15 @@ const StyledShoppingResume = styled.div`
   }
 `;
 
-const ShoppingResume = () => {
+const ShoppingResume = ({ subtotal }) => {
   return (
     <StyledShoppingResume>
       <span>subtotal</span>
       <div>
-        <span>5x de R$ 500,00</span>
-        <span>ou R$ 4.333,33 à vista</span>
+        <span>
+          {subtotal.installments}x de R$ {subtotal.installmentValue}
+        </span>
+        <span>ou R$ {subtotal.value} à vista</span>
       </div>
     </StyledShoppingResume>
   );

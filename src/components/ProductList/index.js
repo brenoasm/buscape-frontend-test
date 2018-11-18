@@ -12,7 +12,12 @@ const defaultProps = {
 
 const StyledProductList = styled.div``;
 
-const ProductList = ({ products, onSelectedImageChange, onBrokenImageUrl }) => {
+const ProductList = ({
+  products,
+  onSelectedImageChange,
+  onBrokenImageUrl,
+  handleProductAddToCartClick
+}) => {
   return (
     <StyledProductList>
       {products &&
@@ -22,6 +27,7 @@ const ProductList = ({ products, onSelectedImageChange, onBrokenImageUrl }) => {
             product={product}
             onBrokenImageUrl={onBrokenImageUrl}
             onSelectedImageChange={onSelectedImageChange}
+            handleProductAddToCartClick={handleProductAddToCartClick}
           />
         ))}
     </StyledProductList>

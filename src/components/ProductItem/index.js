@@ -30,7 +30,7 @@ const StyledProductItem = styled.div`
   }
 `;
 
-const ProductItem = ({ product, onBrokenImageUrl, onSelectedImageChange }) => {
+const ProductItem = ({ product, onBrokenImageUrl, onSelectedImageChange, handleProductAddToCartClick }) => {
   return (
     <StyledProductItem>
       <ProductPreviewImageList
@@ -41,9 +41,8 @@ const ProductItem = ({ product, onBrokenImageUrl, onSelectedImageChange }) => {
         onSelectedImageChange={onSelectedImageChange}
       />
       <ProductInformation
-        id={product.id}
-        name={product.name}
-        price={product.price}
+        product={product}
+        handleProductAddToCartClick={handleProductAddToCartClick}
       />
     </StyledProductItem>
   );

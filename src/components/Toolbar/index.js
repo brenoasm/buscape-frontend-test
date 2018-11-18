@@ -6,8 +6,7 @@ import posed from "react-pose";
 
 import { colors } from "../../theme";
 
-import Cart from "../Cart";
-import ShoppingResume from "../ShoppingResume";
+import CartListContainer from "../../containers/CartListContainer";
 
 const propTypes = {};
 
@@ -48,10 +47,29 @@ const StyledToolbar = styled.div`
     }
   }
 
-  > div:last-child {
-    background-color: ${colors.toolbarSecondary};
-    overflow: hidden;
-    z-index: 1000;
+  ${props => props.totalItems > 0 ?
+    `
+      > div:last-child {
+        background-color: ${colors.toolbarSecondary};
+        overflow: hidden;
+        z-index: 1000;
+      }
+    ` :
+    `
+      > div:last-child {
+        background-color: ${colors.toolbarSecondary};
+        overflow: hidden;
+        font-weight: 700;
+        color: ${colors.white};
+
+        > div {
+          width: 100%;
+          text-align: center;
+          border-top: 2px solid ${colors.toolbarPrimary};
+          padding: 10px;
+        }
+      }
+    `
   }
 `;
 
@@ -61,9 +79,9 @@ const WithSlideUpDown = posed.div({
   open: { height: "auto" }
 });
 
-const Toolbar = ({ toggleMenuVisibility, menuOpen }) => {
+const Toolbar = ({ totalItems, toggleMenuVisibility, menuOpen }) => {
   return (
-    <StyledToolbar>
+    <StyledToolbar totalItems={totalItems}>
       <div>
         <img
           src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
@@ -71,12 +89,15 @@ const Toolbar = ({ toggleMenuVisibility, menuOpen }) => {
         />
         <span onClick={() => toggleMenuVisibility()}>
           <i className="fas fa-bars fa-3x" />
-          <span>2</span>
+          {totalItems > 0 && <span>{totalItems}</span>}
         </span>
       </div>
       <WithSlideUpDown pose={menuOpen ? "open" : "closed"}>
-        <Cart />
-        <ShoppingResume />
+        {totalItems > 0 ? (
+          <CartListContainer />
+        ) : (
+          <div>Não há produtos no carrinho</div>
+        )}
       </WithSlideUpDown>
     </StyledToolbar>
   );

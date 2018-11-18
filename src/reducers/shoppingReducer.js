@@ -1,4 +1,4 @@
-import { ON_SELECTED_IMAGE_CHANGE } from "../actions";
+import { ON_SELECTED_IMAGE_CHANGE, SET_LOADING } from "../actions";
 
 const shoppingInitialState = {
   items: [
@@ -33,7 +33,8 @@ const shoppingInitialState = {
         installmentValue: 389.9
       },
       selectedImage:
-        "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+        "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+      loading: false
     },
     {
       id: 9971,
@@ -66,7 +67,8 @@ const shoppingInitialState = {
         installmentValue: 134.11
       },
       selectedImage:
-        "http://mthumbs.buscape.com.br/tv/smart-tv-samsung-serie-4-un32j4300ag-32-polegadas-led-plana_600x600-PU95547_1.jpg"
+        "http://mthumbs.buscape.com.br/tv/smart-tv-samsung-serie-4-un32j4300ag-32-polegadas-led-plana_600x600-PU95547_1.jpg",
+      loading: false
     },
     {
       id: 6717131,
@@ -84,7 +86,8 @@ const shoppingInitialState = {
         installmentValue: 235.2
       },
       selectedImage:
-        "http://mthumbs.buscape.com.br/camera-digital/canon-eos-rebel-t5i-18-0-megapixels_600x600-PU7bf7b_1.jpg"
+        "http://mthumbs.buscape.com.br/camera-digital/canon-eos-rebel-t5i-18-0-megapixels_600x600-PU7bf7b_1.jpg",
+      loading: false
     },
     {
       id: 6717132,
@@ -103,20 +106,36 @@ const shoppingInitialState = {
         installmentValue: 259.9
       },
       selectedImage:
-        "http://mthumbs.buscape.com.br/notebook/lenovo-ideapad-310-80uh0004br-intel-core-i7-6500u-2-5-ghz-8192-mb-1024-gb_600x600-PU98e6e_1.jpg"
+        "http://mthumbs.buscape.com.br/notebook/lenovo-ideapad-310-80uh0004br-intel-core-i7-6500u-2-5-ghz-8192-mb-1024-gb_600x600-PU98e6e_1.jpg",
+      loading: false
     }
   ]
 };
 
 const shoppingReducer = (state = shoppingInitialState, action) => {
   switch (action.type) {
+    case SET_LOADING:
+      const { product, loading } = action.payload;
+
+      return {
+        ...state,
+        items: state.items.map(item => {
+          return item.id !== product.id
+            ? item
+            : {
+                ...product,
+                loading
+              };
+        })
+      };
+
     case ON_SELECTED_IMAGE_CHANGE:
       const { id, url } = action.payload;
       const { items } = state;
 
-      const product = items.find(product => product.id === id);
+      const item = items.find(item => item.id === id);
 
-      const parsedImages = product.images.map(image => ({
+      const parsedImages = item.images.map(image => ({
         ...image,
         selected: image.url === url
       }));

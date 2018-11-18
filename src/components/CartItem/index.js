@@ -54,22 +54,27 @@ const StyledCartItem = styled.div`
   }
 `;
 
-const CartItem = () => {
+const CartItem = ({
+  cartItem,
+  handleProductRemoveClick,
+  onBrokenImageUrl
+}) => {
   return (
     <StyledCartItem>
       <img
-        src="https://imgmanagercb-a.akamaihd.net/tv/smart-tv-hd-samsung-serie-4-led-32-polegadas-un32j4300ag_300x300-PU95547_1.jpg"
+        src={cartItem.imageUrl}
         alt="Produto"
+        onError={event => onBrokenImageUrl(event)}
       />
       <div>
         <div>
-          <span>Smartphone Apple IPhone 7 128GB</span>
+          <span>{cartItem.name}</span>
           <div>
-            <span>10x R$ 366,56</span>
-            <span>ou R$ 3.500,40 à vista</span>
+            <span>{cartItem.price.installments}x R$ {cartItem.price.installmentValue}</span>
+            <span>ou R$ {cartItem.price.value} à vista</span>
           </div>
         </div>
-        <div>
+        <div onClick={() => handleProductRemoveClick(cartItem)}>
           <i className="fas fa-times" />
         </div>
       </div>

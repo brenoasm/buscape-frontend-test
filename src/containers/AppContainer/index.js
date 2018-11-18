@@ -1,26 +1,38 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { getToolbarMenuVisibility } from '../../selectors/toolbarMenuSelector';
+import { getToolbarMenuVisibility } from "../../selectors/toolbarMenuSelector";
 
-import { toggleMenuVisibility } from '../../actions/toolbarMenuAction';
+import { getTotalItems } from "../../selectors/cartSelector";
+
+import { toggleMenuVisibility } from "../../actions/toolbarMenuAction";
 
 import App from "../../components/App";
 
 class AppContainer extends Component {
   render() {
-    const { menuOpen, toggleMenuVisibility } = this.props;
+    const { menuOpen, toggleMenuVisibility, totalItems } = this.props;
 
-    return <App toggleMenuVisibility={toggleMenuVisibility} menuOpen={menuOpen} />;
+    return (
+      <App
+        totalItems={totalItems}
+        toggleMenuVisibility={toggleMenuVisibility}
+        menuOpen={menuOpen}
+      />
+    );
   }
 }
 
-const mapStateToProps = ({ toolbarMenuState }) => ({
-  menuOpen: getToolbarMenuVisibility(toolbarMenuState)
+const mapStateToProps = ({ toolbarMenuState, cartState }) => ({
+  menuOpen: getToolbarMenuVisibility(toolbarMenuState),
+  totalItems: getTotalItems(cartState)
 });
 
 const mapDispatchToProps = dispatch => ({
   toggleMenuVisibility: () => dispatch(toggleMenuVisibility())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppContainer);

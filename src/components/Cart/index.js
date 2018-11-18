@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { colors } from "../../theme";
-
 import CartItem from "../CartItem";
 
 const propTypes = {};
 
-const defaultProps = {};
+const defaultProps = {
+  cartItems: null
+};
 
 const StyledCart = styled.div`
   > div:first-child {
@@ -18,11 +18,18 @@ const StyledCart = styled.div`
   }
 `;
 
-const Cart = () => {
+const Cart = ({ cartItems, handleProductRemoveClick, onBrokenImageUrl }) => {
   return (
     <StyledCart>
-      <CartItem />
-      <CartItem />
+      {cartItems &&
+        cartItems.map(cartItem => (
+          <CartItem
+            key={cartItem.id}
+            cartItem={cartItem}
+            handleProductRemoveClick={handleProductRemoveClick}
+            onBrokenImageUrl={onBrokenImageUrl}
+          />
+        ))}
     </StyledCart>
   );
 };

@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import { colors } from '../../theme';
+import { colors } from "../../theme";
 
-import Toolbar from '../Toolbar';
-import ProductListContainer from '../../containers/ProductListContainer';
+import Toolbar from "../Toolbar";
+import ProductListContainer from "../../containers/ProductListContainer";
 
 const propTypes = {};
 
@@ -28,17 +28,18 @@ const StyledApp = styled.div`
   }
 `;
 
-const App = ({
-  menuOpen,
-  toggleMenuVisibility
-}) => {
+const App = ({ totalItems, menuOpen, toggleMenuVisibility }) => {
   return (
     <StyledApp>
-      <Toolbar menuOpen={menuOpen} toggleMenuVisibility={toggleMenuVisibility} />
+      <Toolbar
+        totalItems={totalItems}
+        menuOpen={menuOpen}
+        toggleMenuVisibility={toggleMenuVisibility}
+      />
       <ProductListContainer />
     </StyledApp>
-  )
-}
+  );
+};
 
 App.propTypes = propTypes;
 App.defaultProps = defaultProps;

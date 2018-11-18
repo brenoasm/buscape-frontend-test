@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
+import Loading from "../Loading";
+
 const propTypes = {};
 
 const defaultProps = {};
@@ -50,29 +52,48 @@ const StyledProductInformation = styled.div`
   }
 `;
 
-const ProductInformation = ({
-  id,
-  name,
-  price // Formatar valores
-}) => {
+const StyledLoading = styled(Loading)`
+  min-width: 168px;
+  max-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  padding-bottom: 16px;
+
+  div {
+    width: 24px;
+    height: 24px;
+  }
+`;
+
+const ProductInformation = ({ product, handleProductAddToCartClick }) => {
   return (
     <StyledProductInformation>
-      <h2>{name}</h2>
+      <h2>{product.name}</h2>
       <div>
         <div>
           <span>MELHOR PREÇO</span>
           <div>
-            <span>{price.installments}x R$ {price.installmentsValue}</span>
+            <span>
+              {product.price.installments}x R$ {product.price.installmentsValue}
+            </span>
             <span>
               <br />
-              ou R$ {price.value} à vista
+              ou R$ {product.price.value} à vista
             </span>
           </div>
         </div>
         <div>
-          <div>
-            <span>Adicionar ao carrinho <strong>&gt;</strong></span>
-          </div>
+          {product.loading ? (
+            <StyledLoading />
+          ) : (
+            <div onClick={() => handleProductAddToCartClick(product)}>
+              <span>
+                Adicionar ao carrinho <strong>&gt;</strong>
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </StyledProductInformation>
