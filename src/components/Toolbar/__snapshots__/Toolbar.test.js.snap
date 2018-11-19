@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Toolbar
+    menuOpen={false}
+    toggleMenuVisibility={[Function]}
+    totalItems={0}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div>
+          <Image
+            alt="Buscape Logo"
+            height={72}
+            onBrokenImageUrl={[Function]}
+            src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
+            width={110}
+          />
+          <span
+            onClick={[Function]}
+          >
+            <i
+              className="fas fa-bars fa-3x"
+            />
+          </span>
+        </div>,
+        <ForwardRef
+          pose="closed"
+        >
+          <div>
+            Não há produtos no carrinho
+          </div>
+        </ForwardRef>,
+      ],
+      "totalItems": 0,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Image
+              alt="Buscape Logo"
+              height={72}
+              onBrokenImageUrl={[Function]}
+              src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
+              width={110}
+            />,
+            <span
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-bars fa-3x"
+              />
+            </span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "alt": "Buscape Logo",
+              "height": 72,
+              "onBrokenImageUrl": [Function],
+              "src": "https://imagebuscape-a.akamaihd.net/material/buscape.png",
+              "width": 110,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fas fa-bars fa-3x"
+                />,
+                false,
+              ],
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-bars fa-3x",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              false,
+            ],
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            Não há produtos no carrinho
+          </div>,
+          "pose": "closed",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Não há produtos no carrinho",
+          },
+          "ref": null,
+          "rendered": "Não há produtos no carrinho",
+          "type": "div",
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-EHOje",
+        "isStatic": false,
+        "rules": Array [
+          "
+  min-height: 80px;
+  background-color: ",
+          "#F1C71B",
+          ";
+  box-shadow: 0px 1px 1px ",
+          "#FFCD00",
+          ";
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+
+    > span {
+      cursor: pointer;
+      margin-left: auto;
+
+      > span {
+        padding: 1px;
+        border-radius: 50%;
+        background-color: ",
+          "#E80000",
+          ";
+        position: absolute;
+        right: 60px;
+        top: 50px;
+        height: 28px;
+        width: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: ",
+          "#FFF",
+          ";
+      }
+    }
+  }
+
+  ",
+          [Function],
+          "
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "render": [Function],
+      "styledComponentId": "sc-EHOje",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div>
+            <Image
+              alt="Buscape Logo"
+              height={72}
+              onBrokenImageUrl={[Function]}
+              src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
+              width={110}
+            />
+            <span
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-bars fa-3x"
+              />
+            </span>
+          </div>,
+          <ForwardRef
+            pose="closed"
+          >
+            <div>
+              Não há produtos no carrinho
+            </div>
+          </ForwardRef>,
+        ],
+        "totalItems": 0,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Image
+                alt="Buscape Logo"
+                height={72}
+                onBrokenImageUrl={[Function]}
+                src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
+                width={110}
+              />,
+              <span
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-bars fa-3x"
+                />
+              </span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "alt": "Buscape Logo",
+                "height": 72,
+                "onBrokenImageUrl": [Function],
+                "src": "https://imagebuscape-a.akamaihd.net/material/buscape.png",
+                "width": 110,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fas fa-bars fa-3x"
+                  />,
+                  false,
+                ],
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-bars fa-3x",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                false,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              Não há produtos no carrinho
+            </div>,
+            "pose": "closed",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Não há produtos no carrinho",
+            },
+            "ref": null,
+            "rendered": "Não há produtos no carrinho",
+            "type": "div",
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-EHOje",
+          "isStatic": false,
+          "rules": Array [
+            "
+  min-height: 80px;
+  background-color: ",
+            "#F1C71B",
+            ";
+  box-shadow: 0px 1px 1px ",
+            "#FFCD00",
+            ";
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+
+    > span {
+      cursor: pointer;
+      margin-left: auto;
+
+      > span {
+        padding: 1px;
+        border-radius: 50%;
+        background-color: ",
+            "#E80000",
+            ";
+        position: absolute;
+        right: 60px;
+        top: 50px;
+        height: 28px;
+        width: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: ",
+            "#FFF",
+            ";
+      }
+    }
+  }
+
+  ",
+            [Function],
+            "
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "render": [Function],
+        "styledComponentId": "sc-EHOje",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

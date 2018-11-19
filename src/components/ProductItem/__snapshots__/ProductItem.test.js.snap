@@ -1,0 +1,576 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItem matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductItem
+    handleProductAddToCartClick={[Function]}
+    onBrokenImageUrl={[Function]}
+    onSelectedImageChange={[Function]}
+    product={
+      Object {
+        "id": 2321312,
+        "images": Array [
+          Object {
+            "selected": true,
+            "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+          },
+          Object {
+            "selected": false,
+            "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+          },
+          Object {
+            "selected": false,
+            "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+          },
+          Object {
+            "selected": false,
+            "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+          },
+        ],
+        "loading": false,
+        "name": "Smartphone Apple iPhone 7 128GB",
+        "price": Object {
+          "installmentValue": 389.9,
+          "installments": 10,
+          "value": 3509.1,
+        },
+        "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef>
+        <ProductPreviewImageList
+          images={
+            Array [
+              Object {
+                "selected": true,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+              },
+            ]
+          }
+          onBrokenImageUrl={[Function]}
+          onSelectedImageChange={[Function]}
+          productId={2321312}
+          selectedImage="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+        />
+        <ProductInformation
+          handleProductAddToCartClick={[Function]}
+          product={
+            Object {
+              "id": 2321312,
+              "images": Array [
+                Object {
+                  "selected": true,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                },
+              ],
+              "loading": false,
+              "name": "Smartphone Apple iPhone 7 128GB",
+              "price": Object {
+                "installmentValue": 389.9,
+                "installments": 10,
+                "value": 3509.1,
+              },
+              "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+            }
+          }
+        />
+      </ForwardRef>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ProductPreviewImageList
+            images={
+              Array [
+                Object {
+                  "selected": true,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                },
+              ]
+            }
+            onBrokenImageUrl={[Function]}
+            onSelectedImageChange={[Function]}
+            productId={2321312}
+            selectedImage="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+          />,
+          <ProductInformation
+            handleProductAddToCartClick={[Function]}
+            product={
+              Object {
+                "id": 2321312,
+                "images": Array [
+                  Object {
+                    "selected": true,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                  },
+                ],
+                "loading": false,
+                "name": "Smartphone Apple iPhone 7 128GB",
+                "price": Object {
+                  "installmentValue": 389.9,
+                  "installments": 10,
+                  "value": 3509.1,
+                },
+                "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              }
+            }
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "images": Array [
+              Object {
+                "selected": true,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+              },
+              Object {
+                "selected": false,
+                "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+              },
+            ],
+            "onBrokenImageUrl": [Function],
+            "onSelectedImageChange": [Function],
+            "productId": 2321312,
+            "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "handleProductAddToCartClick": [Function],
+            "product": Object {
+              "id": 2321312,
+              "images": Array [
+                Object {
+                  "selected": true,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                },
+              ],
+              "loading": false,
+              "name": "Smartphone Apple iPhone 7 128GB",
+              "price": Object {
+                "installmentValue": 389.9,
+                "installments": 10,
+                "value": 3509.1,
+              },
+              "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-iwsKbI",
+          "isStatic": true,
+          "rules": Array [
+            "
+  background-color: ",
+            "#FFF",
+            ";
+  margin: 15px 5px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px ",
+            "#D8D8D8",
+            ";
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    flex: 2;
+  }
+
+  > div:last-child {
+    margin-left: 20px;
+  }
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "render": [Function],
+        "styledComponentId": "sc-iwsKbI",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef>
+          <ProductPreviewImageList
+            images={
+              Array [
+                Object {
+                  "selected": true,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                },
+              ]
+            }
+            onBrokenImageUrl={[Function]}
+            onSelectedImageChange={[Function]}
+            productId={2321312}
+            selectedImage="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+          />
+          <ProductInformation
+            handleProductAddToCartClick={[Function]}
+            product={
+              Object {
+                "id": 2321312,
+                "images": Array [
+                  Object {
+                    "selected": true,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                  },
+                ],
+                "loading": false,
+                "name": "Smartphone Apple iPhone 7 128GB",
+                "price": Object {
+                  "installmentValue": 389.9,
+                  "installments": 10,
+                  "value": 3509.1,
+                },
+                "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              }
+            }
+          />
+        </ForwardRef>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ProductPreviewImageList
+              images={
+                Array [
+                  Object {
+                    "selected": true,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                  },
+                ]
+              }
+              onBrokenImageUrl={[Function]}
+              onSelectedImageChange={[Function]}
+              productId={2321312}
+              selectedImage="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+            />,
+            <ProductInformation
+              handleProductAddToCartClick={[Function]}
+              product={
+                Object {
+                  "id": 2321312,
+                  "images": Array [
+                    Object {
+                      "selected": true,
+                      "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                    },
+                    Object {
+                      "selected": false,
+                      "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                    },
+                    Object {
+                      "selected": false,
+                      "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                    },
+                    Object {
+                      "selected": false,
+                      "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                    },
+                  ],
+                  "loading": false,
+                  "name": "Smartphone Apple iPhone 7 128GB",
+                  "price": Object {
+                    "installmentValue": 389.9,
+                    "installments": 10,
+                    "value": 3509.1,
+                  },
+                  "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                }
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "images": Array [
+                Object {
+                  "selected": true,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                },
+                Object {
+                  "selected": false,
+                  "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                },
+              ],
+              "onBrokenImageUrl": [Function],
+              "onSelectedImageChange": [Function],
+              "productId": 2321312,
+              "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "handleProductAddToCartClick": [Function],
+              "product": Object {
+                "id": 2321312,
+                "images": Array [
+                  Object {
+                    "selected": true,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_2_c.jpg?v=2347575274",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_3_c.jpg?v=318433138",
+                  },
+                  Object {
+                    "selected": false,
+                    "url": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb/__200x400-PU98460_4_c.jpg?v=33273730",
+                  },
+                ],
+                "loading": false,
+                "name": "Smartphone Apple iPhone 7 128GB",
+                "price": Object {
+                  "installmentValue": 389.9,
+                  "installments": 10,
+                  "value": 3509.1,
+                },
+                "selectedImage": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-iwsKbI",
+            "isStatic": true,
+            "rules": Array [
+              "
+  background-color: ",
+              "#FFF",
+              ";
+  margin: 15px 5px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px ",
+              "#D8D8D8",
+              ";
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    flex: 2;
+  }
+
+  > div:last-child {
+    margin-left: 20px;
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "render": [Function],
+          "styledComponentId": "sc-iwsKbI",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

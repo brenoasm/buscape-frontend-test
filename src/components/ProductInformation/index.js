@@ -92,7 +92,7 @@ const ProductInformation = ({ product, handleProductAddToCartClick }) => {
               <ProductSubtotal price={product.price} />
               <div>
                 {product.loading ? (
-                  <StyledLoading />
+                  <StyledLoading data-test-loading="loading" />
                 ) : (
                   <AddToCartButton
                     handleProductAddToCartClick={handleProductAddToCartClick}

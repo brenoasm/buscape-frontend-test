@@ -1,0 +1,578 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CartItem
+    cartItem={
+      Object {
+        "id": 2321312,
+        "imageUrl": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+        "name": "Smartphone Apple iPhone 7 128GB",
+        "price": Object {
+          "installmentValue": 389.9,
+          "installments": 10,
+          "value": 3509.1,
+        },
+      }
+    }
+    handleProductRemoveClick={[Function]}
+    onBrokenImageUrl={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef>
+        <Image
+          alt="Produto"
+          height={80}
+          onBrokenImageUrl={[Function]}
+          src="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+          width={80}
+        />
+        <div>
+          <div>
+            <span>
+              Smartphone Apple iPhone 7 128GB
+            </span>
+            <CartSubtotal
+              price={
+                Object {
+                  "installmentValue": 389.9,
+                  "installments": 10,
+                  "value": 3509.1,
+                }
+              }
+            />
+          </div>
+          <div
+            data-test-button="remove-button"
+            onClick={[Function]}
+          >
+            <i
+              className="fas fa-times"
+            />
+          </div>
+        </div>
+      </ForwardRef>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Image
+            alt="Produto"
+            height={80}
+            onBrokenImageUrl={[Function]}
+            src="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+            width={80}
+          />,
+          <div>
+            <div>
+              <span>
+                Smartphone Apple iPhone 7 128GB
+              </span>
+              <CartSubtotal
+                price={
+                  Object {
+                    "installmentValue": 389.9,
+                    "installments": 10,
+                    "value": 3509.1,
+                  }
+                }
+              />
+            </div>
+            <div
+              data-test-button="remove-button"
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-times"
+              />
+            </div>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "alt": "Produto",
+            "height": 80,
+            "onBrokenImageUrl": [Function],
+            "src": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+            "width": 80,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <span>
+                  Smartphone Apple iPhone 7 128GB
+                </span>
+                <CartSubtotal
+                  price={
+                    Object {
+                      "installmentValue": 389.9,
+                      "installments": 10,
+                      "value": 3509.1,
+                    }
+                  }
+                />
+              </div>,
+              <div
+                data-test-button="remove-button"
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-times"
+                />
+              </div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span>
+                    Smartphone Apple iPhone 7 128GB
+                  </span>,
+                  <CartSubtotal
+                    price={
+                      Object {
+                        "installmentValue": 389.9,
+                        "installments": 10,
+                        "value": 3509.1,
+                      }
+                    }
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Smartphone Apple iPhone 7 128GB",
+                  },
+                  "ref": null,
+                  "rendered": "Smartphone Apple iPhone 7 128GB",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "price": Object {
+                      "installmentValue": 389.9,
+                      "installments": 10,
+                      "value": 3509.1,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fas fa-times"
+                />,
+                "data-test-button": "remove-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-times",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-htpNat",
+          "isStatic": true,
+          "rules": Array [
+            "
+  margin-top: 2px;
+  padding: 20px;
+  background-color: ",
+            "#DAAF00",
+            ";
+  align-self: stretch;
+  display: flex;
+
+  > div: last-child {
+    display: flex;
+    width: 100%;
+
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 10px;
+      line-height: 0.9em;
+      font-weight: 700;
+      height: 100%;
+
+      > span {
+        color: ",
+            "#FFF",
+            ";
+      }
+    }
+
+    > div:last-child {
+      margin-left: auto;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+  }
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "render": [Function],
+        "styledComponentId": "sc-htpNat",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef>
+          <Image
+            alt="Produto"
+            height={80}
+            onBrokenImageUrl={[Function]}
+            src="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+            width={80}
+          />
+          <div>
+            <div>
+              <span>
+                Smartphone Apple iPhone 7 128GB
+              </span>
+              <CartSubtotal
+                price={
+                  Object {
+                    "installmentValue": 389.9,
+                    "installments": 10,
+                    "value": 3509.1,
+                  }
+                }
+              />
+            </div>
+            <div
+              data-test-button="remove-button"
+              onClick={[Function]}
+            >
+              <i
+                className="fas fa-times"
+              />
+            </div>
+          </div>
+        </ForwardRef>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Image
+              alt="Produto"
+              height={80}
+              onBrokenImageUrl={[Function]}
+              src="http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg"
+              width={80}
+            />,
+            <div>
+              <div>
+                <span>
+                  Smartphone Apple iPhone 7 128GB
+                </span>
+                <CartSubtotal
+                  price={
+                    Object {
+                      "installmentValue": 389.9,
+                      "installments": 10,
+                      "value": 3509.1,
+                    }
+                  }
+                />
+              </div>
+              <div
+                data-test-button="remove-button"
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-times"
+                />
+              </div>
+            </div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "alt": "Produto",
+              "height": 80,
+              "onBrokenImageUrl": [Function],
+              "src": "http://thumbs.buscape.com.br/celular-e-smartphone/smartphone-apple-iphone-7-128gb_600x600-PU98460_1.jpg",
+              "width": 80,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <span>
+                    Smartphone Apple iPhone 7 128GB
+                  </span>
+                  <CartSubtotal
+                    price={
+                      Object {
+                        "installmentValue": 389.9,
+                        "installments": 10,
+                        "value": 3509.1,
+                      }
+                    }
+                  />
+                </div>,
+                <div
+                  data-test-button="remove-button"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="fas fa-times"
+                  />
+                </div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Smartphone Apple iPhone 7 128GB
+                    </span>,
+                    <CartSubtotal
+                      price={
+                        Object {
+                          "installmentValue": 389.9,
+                          "installments": 10,
+                          "value": 3509.1,
+                        }
+                      }
+                    />,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Smartphone Apple iPhone 7 128GB",
+                    },
+                    "ref": null,
+                    "rendered": "Smartphone Apple iPhone 7 128GB",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "price": Object {
+                        "installmentValue": 389.9,
+                        "installments": 10,
+                        "value": 3509.1,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <i
+                    className="fas fa-times"
+                  />,
+                  "data-test-button": "remove-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-times",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  margin-top: 2px;
+  padding: 20px;
+  background-color: ",
+              "#DAAF00",
+              ";
+  align-self: stretch;
+  display: flex;
+
+  > div: last-child {
+    display: flex;
+    width: 100%;
+
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 10px;
+      line-height: 0.9em;
+      font-weight: 700;
+      height: 100%;
+
+      > span {
+        color: ",
+              "#FFF",
+              ";
+      }
+    }
+
+    > div:last-child {
+      margin-left: auto;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

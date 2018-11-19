@@ -69,7 +69,7 @@ const CartItem = ({ cartItem, handleProductRemoveClick, onBrokenImageUrl }) => {
               <span>{cartItem.name}</span>
               <CartSubtotal price={cartItem.price} />
             </div>
-            <div onClick={() => handleProductRemoveClick(cartItem)}>
+            <div onClick={() => handleProductRemoveClick(cartItem)} data-test-button="remove-button">
               <i className="fas fa-times" />
             </div>
           </div>
