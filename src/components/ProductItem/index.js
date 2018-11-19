@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -7,9 +7,19 @@ import { colors } from "../../theme";
 import ProductPreviewImageList from "../ProductPreviewImageList";
 import ProductInformation from "../ProductInformation";
 
-const propTypes = {};
+const propTypes = {
+  product: PropTypes.object.isRequired,
+  onBrokenImageUrl: PropTypes.func.isRequired,
+  onSelectedImageChange: PropTypes.func,
+  handleProductAddToCartClick: PropTypes.func
+};
 
-const defaultProps = {};
+const defaultProps = {
+  product: null,
+  onBrokenImageUrl: () => {},
+  onSelectedImageChange: () => {},
+  handleProductAddToCartClick: () => {}
+};
 
 const StyledProductItem = styled.div`
   background-color: ${colors.white};
@@ -30,21 +40,30 @@ const StyledProductItem = styled.div`
   }
 `;
 
-const ProductItem = ({ product, onBrokenImageUrl, onSelectedImageChange, handleProductAddToCartClick }) => {
+const ProductItem = ({
+  product,
+  onBrokenImageUrl,
+  onSelectedImageChange,
+  handleProductAddToCartClick
+}) => {
   return (
-    <StyledProductItem>
-      <ProductPreviewImageList
-        selectedImage={product.selectedImage}
-        images={product.images}
-        productId={product.id}
-        onBrokenImageUrl={onBrokenImageUrl}
-        onSelectedImageChange={onSelectedImageChange}
-      />
-      <ProductInformation
-        product={product}
-        handleProductAddToCartClick={handleProductAddToCartClick}
-      />
-    </StyledProductItem>
+    <Fragment>
+      {product && (
+        <StyledProductItem>
+          <ProductPreviewImageList
+            selectedImage={product.selectedImage}
+            images={product.images}
+            productId={product.id}
+            onBrokenImageUrl={onBrokenImageUrl}
+            onSelectedImageChange={onSelectedImageChange}
+          />
+          <ProductInformation
+            product={product}
+            handleProductAddToCartClick={handleProductAddToCartClick}
+          />
+        </StyledProductItem>
+      )}
+    </Fragment>
   );
 };
 

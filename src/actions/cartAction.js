@@ -10,12 +10,12 @@ export const handleProductAddToCartClick = product => dispatch => {
   }, 2000);
 };
 
+export const handleProductRemoveClick = product => ({
+  type: REMOVE_FROM_CART,
+  payload: product
+});
+
 export const addToCart = product => ({
   type: ADD_TO_CART,
   payload: product
 });
-
-export const handleProductRemoveClick = product => ({
-  type: REMOVE_FROM_CART,
-  payload: product
-})

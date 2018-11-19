@@ -6,11 +6,19 @@ import posed from "react-pose";
 
 import { colors } from "../../theme";
 
-import CartListContainer from "../../containers/CartListContainer";
+import CartContainer from "../../containers/CartContainer";
 
-const propTypes = {};
+const propTypes = {
+  totalItems: PropTypes.number,
+  toggleMenuVisibility: PropTypes.func,
+  menuOpen: PropTypes.bool
+};
 
-const defaultProps = {};
+const defaultProps = {
+  totalItems: 0,
+  toggleMenuVisibility: () => {},
+  menuOpen: 0
+};
 
 const StyledToolbar = styled.div`
   min-height: 80px;
@@ -47,15 +55,16 @@ const StyledToolbar = styled.div`
     }
   }
 
-  ${props => props.totalItems > 0 ?
-    `
+  ${props =>
+    props.totalItems > 0
+      ? `
       > div:last-child {
         background-color: ${colors.toolbarSecondary};
         overflow: hidden;
         z-index: 1000;
       }
-    ` :
     `
+      : `
       > div:last-child {
         background-color: ${colors.toolbarSecondary};
         overflow: hidden;
@@ -69,8 +78,7 @@ const StyledToolbar = styled.div`
           padding: 10px;
         }
       }
-    `
-  }
+    `}
 `;
 
 // Arrumar uma forma melhor de separar esse componente de animação
@@ -79,29 +87,27 @@ const WithSlideUpDown = posed.div({
   open: { height: "auto" }
 });
 
-const Toolbar = ({ totalItems, toggleMenuVisibility, menuOpen }) => {
-  return (
-    <StyledToolbar totalItems={totalItems}>
-      <div>
-        <img
-          src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
-          alt="Buscape Logo"
-        />
-        <span onClick={() => toggleMenuVisibility()}>
-          <i className="fas fa-bars fa-3x" />
-          {totalItems > 0 && <span>{totalItems}</span>}
-        </span>
-      </div>
-      <WithSlideUpDown pose={menuOpen ? "open" : "closed"}>
-        {totalItems > 0 ? (
-          <CartListContainer />
-        ) : (
-          <div>Não há produtos no carrinho</div>
-        )}
-      </WithSlideUpDown>
-    </StyledToolbar>
-  );
-};
+const Toolbar = ({ totalItems, toggleMenuVisibility, menuOpen }) => (
+  <StyledToolbar totalItems={totalItems}>
+    <div>
+      <img
+        src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
+        alt="Buscape Logo"
+      />
+      <span onClick={() => toggleMenuVisibility()}>
+        <i className="fas fa-bars fa-3x" />
+        {totalItems > 0 && <span>{totalItems}</span>}
+      </span>
+    </div>
+    <WithSlideUpDown pose={menuOpen ? "open" : "closed"}>
+      {totalItems > 0 ? (
+        <CartContainer />
+      ) : (
+        <div>Não há produtos no carrinho</div>
+      )}
+    </WithSlideUpDown>
+  </StyledToolbar>
+);
 
 Toolbar.propTypes = propTypes;
 Toolbar.defaultProps = defaultProps;

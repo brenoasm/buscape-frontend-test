@@ -4,15 +4,21 @@ import PropTypes from "prop-types";
 
 import CartItem from "../CartItem";
 
-const propTypes = {};
+const propTypes = {
+  cartItems: PropTypes.array,
+  handleProductRemoveClick: PropTypes.func,
+  onBrokenImageUrl: PropTypes.func.isRequired
+};
 
 const defaultProps = {
-  cartItems: null
+  cartItems: null,
+  handleProductRemoveClick: () => {},
+  onBrokenImageUrl: () => {}
 };
 
 const StyledCart = styled.div`
   > div:first-child {
-    >div: first-child {
+    > div: first-child {
       box-shadow: inset 0px 5px 10px #caa201;
     }
   }

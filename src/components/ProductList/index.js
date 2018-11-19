@@ -1,38 +1,41 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import ProductItem from "../ProductItem";
 
-const propTypes = {};
-
-const defaultProps = {
-  products: null
+const propTypes = {
+  products: PropTypes.array,
+  onSelectedImageChange: PropTypes.func,
+  onBrokenImageUrl: PropTypes.func.isRequired,
+  handleProductAddToCartClick: PropTypes.func
 };
 
-const StyledProductList = styled.div``;
+const defaultProps = {
+  products: null,
+  onSelectedImageChange: () => {},
+  onBrokenImageUrl: () => {},
+  handleProductAddToCartClick: () => {}
+};
 
 const ProductList = ({
   products,
   onSelectedImageChange,
   onBrokenImageUrl,
   handleProductAddToCartClick
-}) => {
-  return (
-    <StyledProductList>
-      {products &&
-        products.map(product => (
-          <ProductItem
-            key={product.id}
-            product={product}
-            onBrokenImageUrl={onBrokenImageUrl}
-            onSelectedImageChange={onSelectedImageChange}
-            handleProductAddToCartClick={handleProductAddToCartClick}
-          />
-        ))}
-    </StyledProductList>
-  );
-};
+}) => (
+  <div>
+    {products &&
+      products.map(product => (
+        <ProductItem
+          key={product.id}
+          product={product}
+          onBrokenImageUrl={onBrokenImageUrl}
+          onSelectedImageChange={onSelectedImageChange}
+          handleProductAddToCartClick={handleProductAddToCartClick}
+        />
+      ))}
+  </div>
+);
 
 ProductList.propTypes = propTypes;
 ProductList.defaultProps = defaultProps;

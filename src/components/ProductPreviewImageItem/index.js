@@ -4,9 +4,21 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
-const propTypes = {};
+const propTypes = {
+  url: PropTypes.string,
+  productId: PropTypes.number,
+  active: PropTypes.bool,
+  onBrokenImageUrl: PropTypes.func.isRequired,
+  onSelectedImageChange: PropTypes.func
+};
 
-const defaultProps = {};
+const defaultProps = {
+  url: "",
+  productId: null,
+  active: false,
+  onBrokenImageUrl: () => {},
+  onSelectedImageChange: () => {}
+};
 
 const StyledProductPreviewImageItem = styled.div`
   display: flex;
@@ -29,20 +41,18 @@ const ProductPreviewImageItem = ({
   active,
   onBrokenImageUrl,
   onSelectedImageChange
-}) => {
-  return (
-    <StyledProductPreviewImageItem
-      active={active}
-      onClick={() => onSelectedImageChange(productId, url)}
-    >
-      <img
-        onError={event => onBrokenImageUrl(event)}
-        src={url}
-        alt="Imagem do Produto"
-      />
-    </StyledProductPreviewImageItem>
-  );
-};
+}) => (
+  <StyledProductPreviewImageItem
+    active={active}
+    onClick={() => onSelectedImageChange(productId, url)}
+  >
+    <img
+      onError={onBrokenImageUrl}
+      src={url}
+      alt="Imagem do Produto"
+    />
+  </StyledProductPreviewImageItem>
+);
 
 ProductPreviewImageItem.propTypes = propTypes;
 ProductPreviewImageItem.defaultProps = defaultProps;

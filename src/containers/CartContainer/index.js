@@ -1,17 +1,16 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { onBrokenImageUrl } from "../../utils/image-utils";
-
-import Cart from "../../components/Cart";
-import ShoppingResume from "../../components/ShoppingResume";
 
 import { getCartItems, getSubtotal } from "../../selectors/cartSelector";
 
 import { handleProductRemoveClick } from "../../actions/cartAction";
 
-class CartListContainer extends Component {
+import Cart from "../../components/Cart";
+import ShoppingResume from "../../components/ShoppingResume";
+
+class CartContainer extends Component {
   render() {
     const { cartItems, subtotal, handleProductRemoveClick } = this.props;
 
@@ -41,4 +40,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CartListContainer);
+)(CartContainer);

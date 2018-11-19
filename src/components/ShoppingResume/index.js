@@ -4,9 +4,21 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
-const propTypes = {};
+const propTypes = {
+  subtotal: PropTypes.shape({
+    installments: PropTypes.number,
+    installmentValue: PropTypes.number,
+    value: PropTypes.number
+  })
+};
 
-const defaultProps = {};
+const defaultProps = {
+  subtotal: {
+    installments: 0,
+    installmentValue: 0,
+    value: 0
+  }
+};
 
 const StyledShoppingResume = styled.div`
   display: flex;
@@ -28,19 +40,17 @@ const StyledShoppingResume = styled.div`
   }
 `;
 
-const ShoppingResume = ({ subtotal }) => {
-  return (
-    <StyledShoppingResume>
-      <span>subtotal</span>
-      <div>
-        <span>
-          {subtotal.installments}x de R$ {subtotal.installmentValue}
-        </span>
-        <span>ou R$ {subtotal.value} à vista</span>
-      </div>
-    </StyledShoppingResume>
-  );
-};
+const ShoppingResume = ({ subtotal }) => (
+  <StyledShoppingResume>
+    <span>subtotal</span>
+    <div>
+      <span>
+        {subtotal.installments}x de R$ {subtotal.installmentValue}
+      </span>
+      <span>ou R$ {subtotal.value} à vista</span>
+    </div>
+  </StyledShoppingResume>
+);
 
 ShoppingResume.propTypes = propTypes;
 ShoppingResume.defaultProps = defaultProps;

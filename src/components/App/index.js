@@ -7,9 +7,17 @@ import { colors } from "../../theme";
 import Toolbar from "../Toolbar";
 import ProductListContainer from "../../containers/ProductListContainer";
 
-const propTypes = {};
+const propTypes = {
+  totalItems: PropTypes.number,
+  menuOpen: PropTypes.bool,
+  toggleMenuVisibility: PropTypes.func
+};
 
-const defaultProps = {};
+const defaultProps = {
+  totalItems: 0,
+  menuOpen: false,
+  toggleMenuVisibility: () => {}
+};
 
 const StyledApp = styled.div`
   background-color: ${colors.grayPrimary};

@@ -1,12 +1,20 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
-const propTypes = {};
+const propTypes = {
+  cartItem: PropTypes.object.isRequired,
+  handleProductRemoveClick: PropTypes.func,
+  onBrokenImageUrl: PropTypes.func.isRequired
+};
 
-const defaultProps = {};
+const defaultProps = {
+  cartItem: null,
+  handleProductRemoveClick: () => {},
+  onBrokenImageUrl: () => {}
+};
 
 const StyledCartItem = styled.div`
   margin-top: 2px;
@@ -54,31 +62,34 @@ const StyledCartItem = styled.div`
   }
 `;
 
-const CartItem = ({
-  cartItem,
-  handleProductRemoveClick,
-  onBrokenImageUrl
-}) => {
+const CartItem = ({ cartItem, handleProductRemoveClick, onBrokenImageUrl }) => {
   return (
-    <StyledCartItem>
-      <img
-        src={cartItem.imageUrl}
-        alt="Produto"
-        onError={event => onBrokenImageUrl(event)}
-      />
-      <div>
-        <div>
-          <span>{cartItem.name}</span>
+    <Fragment>
+      {cartItem && (
+        <StyledCartItem>
+          <img
+            src={cartItem.imageUrl}
+            alt="Produto"
+            onError={onBrokenImageUrl}
+          />
           <div>
-            <span>{cartItem.price.installments}x R$ {cartItem.price.installmentValue}</span>
-            <span>ou R$ {cartItem.price.value} à vista</span>
+            <div>
+              <span>{cartItem.name}</span>
+              <div>
+                <span>
+                  {cartItem.price.installments}x R${" "}
+                  {cartItem.price.installmentValue}
+                </span>
+                <span>ou R$ {cartItem.price.value} à vista</span>
+              </div>
+            </div>
+            <div onClick={() => handleProductRemoveClick(cartItem)}>
+              <i className="fas fa-times" />
+            </div>
           </div>
-        </div>
-        <div onClick={() => handleProductRemoveClick(cartItem)}>
-          <i className="fas fa-times" />
-        </div>
-      </div>
-    </StyledCartItem>
+        </StyledCartItem>
+      )}
+    </Fragment>
   );
 };
 

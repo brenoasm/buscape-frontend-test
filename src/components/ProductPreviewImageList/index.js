@@ -2,13 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { colors } from "../../theme";
-
 import ProductPreviewImageItem from "../ProductPreviewImageItem";
 
-const propTypes = {};
+const propTypes = {
+  images: PropTypes.array,
+  productId: PropTypes.number,
+  selectedImage: PropTypes.string,
+  onBrokenImageUrl: PropTypes.func.isRequired,
+  onSelectedImageChange: PropTypes.func
+};
 
-const defaultProps = {};
+const defaultProps = {
+  images: null,
+  productId: null,
+  selectedImage: "",
+  onBrokenImageUrl: () => {},
+  onSelectedImageChange: () => {}
+};
 
 const StyledProductPreviewImageList = styled.div`
   display: flex;
@@ -51,7 +61,7 @@ const ProductPreviewImageList = ({
       </div>
       <div>
         <img
-          onError={event => onBrokenImageUrl(event)}
+          onError={onBrokenImageUrl}
           src={selectedImage}
           alt="Imagem do Produto"
         />

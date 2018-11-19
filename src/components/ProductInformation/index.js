@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -6,9 +6,15 @@ import { colors } from "../../theme";
 
 import Loading from "../Loading";
 
-const propTypes = {};
+const propTypes = {
+  product: PropTypes.object.isRequired,
+  handleProductAddToCartClick: PropTypes.func
+};
 
-const defaultProps = {};
+const defaultProps = {
+  product: null,
+  handleProductAddToCartClick: () => {}
+};
 
 const StyledProductInformation = styled.div`
   display: flex;
@@ -69,34 +75,39 @@ const StyledLoading = styled(Loading)`
 
 const ProductInformation = ({ product, handleProductAddToCartClick }) => {
   return (
-    <StyledProductInformation>
-      <h2>{product.name}</h2>
-      <div>
-        <div>
-          <span>MELHOR PREÇO</span>
+    <Fragment>
+      {product && (
+        <StyledProductInformation>
+          <h2>{product.name}</h2>
           <div>
-            <span>
-              {product.price.installments}x R$ {product.price.installmentsValue}
-            </span>
-            <span>
-              <br />
-              ou R$ {product.price.value} à vista
-            </span>
-          </div>
-        </div>
-        <div>
-          {product.loading ? (
-            <StyledLoading />
-          ) : (
-            <div onClick={() => handleProductAddToCartClick(product)}>
-              <span>
-                Adicionar ao carrinho <strong>&gt;</strong>
-              </span>
+            <div>
+              <span>MELHOR PREÇO</span>
+              <div>
+                <span>
+                  {product.price.installments}x R${" "}
+                  {product.price.installmentsValue}
+                </span>
+                <span>
+                  <br />
+                  ou R$ {product.price.value} à vista
+                </span>
+              </div>
             </div>
-          )}
-        </div>
-      </div>
-    </StyledProductInformation>
+            <div>
+              {product.loading ? (
+                <StyledLoading />
+              ) : (
+                <div onClick={() => handleProductAddToCartClick(product)}>
+                  <span>
+                    Adicionar ao carrinho <strong>&gt;</strong>
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+        </StyledProductInformation>
+      )}
+    </Fragment>
   );
 };
 

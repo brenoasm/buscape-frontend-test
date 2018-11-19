@@ -1,5 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  className: PropTypes.object
+};
+
+const defaultProps = {
+  className: {}
+};
 
 const StyledLoading = styled.div`
   display: inline-block;
@@ -41,17 +50,16 @@ const StyledLoading = styled.div`
   }
 `;
 
-const Loading = ({
-  className
-}) => {
-  return (
-    <StyledLoading className={className}>
-      <div />
-      <div />
-      <div />
-      <div />
-    </StyledLoading>
-  );
-};
+const Loading = ({ className }) => (
+  <StyledLoading className={className}>
+    <div />
+    <div />
+    <div />
+    <div />
+  </StyledLoading>
+);
+
+Loading.propTypes = propTypes;
+Loading.defaultProps = defaultProps;
 
 export default Loading;
