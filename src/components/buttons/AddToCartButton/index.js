@@ -20,6 +20,7 @@ const StyledAddToCartButton = styled.div`
   border: none;
   border-radius: 2px;
   padding: 0 10px;
+  cursor: pointer;
 
   > span {
     text-align: center;

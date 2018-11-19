@@ -30,6 +30,7 @@ const StyledProductPreviewImageItem = styled.div`
   border-radius: 3px;
   padding: 3px;
   margin: 3px;
+  cursor: pointer;
 `;
 
 const ProductPreviewImageItem = ({

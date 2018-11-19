@@ -22,8 +22,9 @@ const defaultProps = {
 const StyledApp = styled.div`
   background-color: ${colors.grayPrimary};
   display: grid;
-  grid-column-template: repeat(12, 1fr);
-  grid-row-template: 80px auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 80px auto;
+  grid-row-gap: 20px;
 
   > div:first-child {
     grid-column: 1 / -1;

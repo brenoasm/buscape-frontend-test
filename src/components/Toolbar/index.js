@@ -27,6 +27,9 @@ const StyledToolbar = styled.div`
   min-height: 80px;
   background-color: ${colors.toolbarSecondary};
   box-shadow: 0px 1px 1px ${colors.toolbarPrimary};
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
 
   > div:first-child {
     display: flex;
@@ -34,6 +37,7 @@ const StyledToolbar = styled.div`
     padding: 15px 30px;
 
     > span {
+      cursor: pointer;
       margin-left: auto;
 
       > span {

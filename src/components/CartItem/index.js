@@ -47,10 +47,7 @@ const StyledCartItem = styled.div`
     > div:last-child {
       margin-left: auto;
       padding: 0 10px;
-
-      > i {
-        height: 15px;
-      }
+      cursor: pointer;
     }
   }
 `;
