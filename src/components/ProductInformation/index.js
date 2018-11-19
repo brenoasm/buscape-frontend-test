@@ -5,6 +5,10 @@ import PropTypes from "prop-types";
 import { colors } from "../../theme";
 
 import Loading from "../Loading";
+import Tag from "../Tag";
+import AddToCartButton from "../buttons/AddToCartButton";
+import ProductSubtotal from "../ProductSubtotal";
+import FavoriteButton from "../buttons/FavoriteButton";
 
 const propTypes = {
   product: PropTypes.object.isRequired,
@@ -20,54 +24,52 @@ const StyledProductInformation = styled.div`
   display: flex;
   flex-direction: column;
 
-  > div {
-    display: flex;
-    justify-content: space-between;
+  > div:first-child {
+    margin-bottom: 10px;
+
+    > span:first-child {
+      font-size: 26px;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+
+    > span:last-child {
+      display: inline-block;
+      line-height: normal;
+    }
+  }
+
+  > div:nth-child(2) {
+    border-top: 1px solid ${colors.grayPrimary};
+    padding: 15px 0;
 
     > div:first-child {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      > span {
-        line-height: 30px;
-      }
+      width: 100%;
+      margin-bottom: 15px;
     }
 
     > div:last-child {
       display: flex;
-      align-items: center;
+      line-height: 35px;
 
-      > div {
-        color: ${colors.white};
-        background-color: ${colors.green};
-        border: none;
-        border-radius: 2px;
-        padding: 8px;
-
-        > span {
-          text-align: center;
-          font-size: 16px;
-
-          > strong {
-            font-size: 18px;
-          }
-        }
+      > div:last-child {
+        margin-left: auto;
       }
     }
   }
 `;
 
 const StyledLoading = styled(Loading)`
-  min-width: 168px;
-  max-height: 24px;
+  background-color: ${colors.green};
+  min-width: 144.984px;
+  max-height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
-  padding-bottom: 16px;
+  padding: 0 10px;
+  margin-left: auto;
 
-  div {
+  > div {
     width: 24px;
     height: 24px;
   }
@@ -78,31 +80,26 @@ const ProductInformation = ({ product, handleProductAddToCartClick }) => {
     <Fragment>
       {product && (
         <StyledProductInformation>
-          <h2>{product.name}</h2>
+          <div>
+            <span>{product.name}</span>
+            <FavoriteButton />
+          </div>
           <div>
             <div>
-              <span>MELHOR PREÇO</span>
-              <div>
-                <span>
-                  {product.price.installments}x R${" "}
-                  {product.price.installmentsValue}
-                </span>
-                <span>
-                  <br />
-                  ou R$ {product.price.value} à vista
-                </span>
-              </div>
+              <Tag text="MELHOR PREÇO" />
             </div>
             <div>
-              {product.loading ? (
-                <StyledLoading />
-              ) : (
-                <div onClick={() => handleProductAddToCartClick(product)}>
-                  <span>
-                    Adicionar ao carrinho <strong>&gt;</strong>
-                  </span>
-                </div>
-              )}
+              <ProductSubtotal price={product.price} />
+              <div>
+                {product.loading ? (
+                  <StyledLoading />
+                ) : (
+                  <AddToCartButton
+                    handleProductAddToCartClick={handleProductAddToCartClick}
+                    product={product}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </StyledProductInformation>

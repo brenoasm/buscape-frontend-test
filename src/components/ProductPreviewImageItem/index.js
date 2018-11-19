@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
+import Image from '../Image';
+
 const propTypes = {
   url: PropTypes.string,
   productId: PropTypes.number,
@@ -28,11 +30,6 @@ const StyledProductPreviewImageItem = styled.div`
   border-radius: 3px;
   padding: 3px;
   margin: 3px;
-
-  > img {
-    height: 40px;
-    width: 40px;
-  }
 `;
 
 const ProductPreviewImageItem = ({
@@ -46,10 +43,12 @@ const ProductPreviewImageItem = ({
     active={active}
     onClick={() => onSelectedImageChange(productId, url)}
   >
-    <img
-      onError={onBrokenImageUrl}
+    <Image
       src={url}
-      alt="Imagem do Produto"
+      alt="Produto"
+      onBrokenImageUrl={onBrokenImageUrl}
+      height={40}
+      width={40}
     />
   </StyledProductPreviewImageItem>
 );

@@ -3,11 +3,11 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const propTypes = {
-  className: PropTypes.object
+  className: PropTypes.string
 };
 
 const defaultProps = {
-  className: {}
+  className: ''
 };
 
 const StyledLoading = styled.div`

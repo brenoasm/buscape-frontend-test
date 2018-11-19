@@ -6,7 +6,10 @@ import posed from "react-pose";
 
 import { colors } from "../../theme";
 
+import { onBrokenImageUrl } from '../../utils/image-utils';
+
 import CartContainer from "../../containers/CartContainer";
+import Image from '../Image';
 
 const propTypes = {
   totalItems: PropTypes.number,
@@ -29,10 +32,6 @@ const StyledToolbar = styled.div`
     display: flex;
     align-items: center;
     padding: 15px 30px;
-
-    > img {
-      height: 72px;
-    }
 
     > span {
       margin-left: auto;
@@ -90,9 +89,12 @@ const WithSlideUpDown = posed.div({
 const Toolbar = ({ totalItems, toggleMenuVisibility, menuOpen }) => (
   <StyledToolbar totalItems={totalItems}>
     <div>
-      <img
+      <Image
         src="https://imagebuscape-a.akamaihd.net/material/buscape.png"
         alt="Buscape Logo"
+        onBrokenImageUrl={onBrokenImageUrl}
+        height={72}
+        width={110}
       />
       <span onClick={() => toggleMenuVisibility()}>
         <i className="fas fa-bars fa-3x" />

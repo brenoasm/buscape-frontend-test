@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
+import CartSubtotal from '../CartSubtotal';
+import Image from '../Image';
+
 const propTypes = {
   cartItem: PropTypes.object.isRequired,
   handleProductRemoveClick: PropTypes.func,
@@ -23,11 +26,7 @@ const StyledCartItem = styled.div`
   align-self: stretch;
   display: flex;
 
-  > img {
-    height: 80px;
-  }
-
-  > div {
+  > div: last-child {
     display: flex;
     width: 100%;
 
@@ -42,12 +41,6 @@ const StyledCartItem = styled.div`
 
       > span {
         color: ${colors.white};
-      }
-
-      > div {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.4em;
       }
     }
 
@@ -67,21 +60,17 @@ const CartItem = ({ cartItem, handleProductRemoveClick, onBrokenImageUrl }) => {
     <Fragment>
       {cartItem && (
         <StyledCartItem>
-          <img
+          <Image
             src={cartItem.imageUrl}
             alt="Produto"
-            onError={onBrokenImageUrl}
+            onBrokenImageUrl={onBrokenImageUrl}
+            height={80}
+            width={80}
           />
           <div>
             <div>
               <span>{cartItem.name}</span>
-              <div>
-                <span>
-                  {cartItem.price.installments}x R${" "}
-                  {cartItem.price.installmentValue}
-                </span>
-                <span>ou R$ {cartItem.price.value} à vista</span>
-              </div>
+              <CartSubtotal price={cartItem.price} />
             </div>
             <div onClick={() => handleProductRemoveClick(cartItem)}>
               <i className="fas fa-times" />

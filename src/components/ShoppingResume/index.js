@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../theme";
 
+import CartSubtotal from '../CartSubtotal';
+
 const propTypes = {
   subtotal: PropTypes.shape({
     installments: PropTypes.number,
@@ -43,12 +45,7 @@ const StyledShoppingResume = styled.div`
 const ShoppingResume = ({ subtotal }) => (
   <StyledShoppingResume>
     <span>subtotal</span>
-    <div>
-      <span>
-        {subtotal.installments}x de R$ {subtotal.installmentValue}
-      </span>
-      <span>ou R$ {subtotal.value} à vista</span>
-    </div>
+    <CartSubtotal price={subtotal}/>
   </StyledShoppingResume>
 );
 

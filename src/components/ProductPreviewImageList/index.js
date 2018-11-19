@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import ProductPreviewImageItem from "../ProductPreviewImageItem";
+import Image from '../Image';
 
 const propTypes = {
   images: PropTypes.array,
@@ -29,12 +30,6 @@ const StyledProductPreviewImageList = styled.div`
     display: flex;
     flex-direction: column;
   }
-
-  > div:last-child {
-    > img {
-      height: 200px;
-    }
-  }
 `;
 
 const ProductPreviewImageList = ({
@@ -60,10 +55,12 @@ const ProductPreviewImageList = ({
           ))}
       </div>
       <div>
-        <img
-          onError={onBrokenImageUrl}
+        <Image
           src={selectedImage}
-          alt="Imagem do Produto"
+          alt="Produto"
+          onBrokenImageUrl={onBrokenImageUrl}
+          height={200}
+          width={200}
         />
       </div>
     </StyledProductPreviewImageList>

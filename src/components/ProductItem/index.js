@@ -24,10 +24,9 @@ const defaultProps = {
 const StyledProductItem = styled.div`
   background-color: ${colors.white};
   margin: 15px 5px;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 3px 3px ${colors.graySecondary};
-  height: 230px;
   display: flex;
   justify-content: space-between;
 
