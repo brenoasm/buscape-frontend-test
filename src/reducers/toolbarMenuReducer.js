@@ -1,10 +1,10 @@
 import { TOGGLE_MENU_VISIBILITY } from '../actions';
 
-const toolbarMenuInitialState = {
+export const toolbarMenuInitialState = {
   open: false
 };
 
-const toolbarMenuReducer = (state = toolbarMenuInitialState, action) => {
+export const toolbarMenuReducer = (state = toolbarMenuInitialState, action) => {
   switch (action.type) {
 
     case TOGGLE_MENU_VISIBILITY:

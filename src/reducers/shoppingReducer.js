@@ -1,6 +1,6 @@
 import { ON_SELECTED_IMAGE_CHANGE, SET_LOADING } from "../actions";
 
-const shoppingInitialState = {
+export const shoppingInitialState = {
   items: [
     {
       id: 2321312,

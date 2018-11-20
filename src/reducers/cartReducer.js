@@ -1,6 +1,6 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions";
 
-const cartInitialState = {
+export const cartInitialState = {
   cartItems: [],
   subtotal: {
     value: 0,
@@ -10,7 +10,7 @@ const cartInitialState = {
   totalItems: 0
 };
 
-const calculateSubtotal = (cartItems, installments) => {
+export const calculateSubtotal = (cartItems, installments) => {
   return cartItems.length > 0
     ? cartItems.reduce((newObj, cartItem) => {
         const value = (newObj.value ? newObj.value : 0) + cartItem.price.value;
